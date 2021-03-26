@@ -1,0 +1,28 @@
+{
+  "name": "centre-source-test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d build ./app -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "nodemon --exec babel-node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.12",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
